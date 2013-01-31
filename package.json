@@ -7,7 +7,7 @@
     "url": "git://github.com/dominictarr/stream-combiner.git"
   },
   "dependencies": {
-    "duplexer": "0.0.2"
+    "duplexer": "~0.0.3"
   },
   "devDependencies": {
     "tape": "0.0.4",
