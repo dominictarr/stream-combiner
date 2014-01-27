@@ -1,8 +1,9 @@
 var duplexer = require('duplexer')
+var slice = Array.prototype.slice
 
 module.exports = function () {
 
-  var streams = [].slice.call(arguments)
+  var streams = slice.call(arguments)
     , first = streams[0]
     , last = streams[streams.length - 1]
     , thepipe = duplexer(first, last)
@@ -24,7 +25,7 @@ module.exports = function () {
   recurse(streams)
  
   function onerror () {
-    var args = [].slice.call(arguments)
+    var args = slice.call(arguments)
     args.unshift('error')
     thepipe.emit.apply(thepipe, args)
   }
