@@ -1,6 +1,6 @@
 # stream-combiner
 
-<img src=https://secure.travis-ci.org/dominictarr/stream-combiner.png?branch=master>
+[![Build Status](https://travis-ci.org/dominictarr/stream-combiner.png?branch=master)](https://travis-ci.org/dominictarr/stream-combiner)
 
 ## Combine (stream1,...,streamN)
 
