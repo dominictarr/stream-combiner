@@ -50,3 +50,16 @@ test('3 pipe do not duplicate errors', function (test) {
 
 })
 
+test('0 argument through stream', function (test) {
+  test.plan(3)
+  var pipe = combine()
+   , expected = [ 'beep', 'boop', 'robots' ]
+
+  pipe.pipe(es.through(function(data) {
+    test.equal(data, expected.shift())
+  }))
+  pipe.write('beep')
+  pipe.write('boop')
+  pipe.end('robots')
+})
+

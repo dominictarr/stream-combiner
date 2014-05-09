@@ -1,16 +1,17 @@
 var duplexer = require('duplexer')
+var through = require('through')
 
 module.exports = function () {
-
   var streams = [].slice.call(arguments)
-    , first = streams[0]
+
+  if(streams.length == 0)
+    return through()
+  else if(streams.length == 1)
+    return streams[0]
+
+  var first = streams[0]
     , last = streams[streams.length - 1]
     , thepipe = duplexer(first, last)
-
-  if(streams.length == 1)
-    return streams[0]
-  else if (!streams.length)
-    throw new Error('connect called with empty args')
 
   //pipe all the streams together
 
