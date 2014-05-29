@@ -4,7 +4,7 @@
 
 ## Combine (stream1,...,streamN)
 
-Turn a pipeline into a single stream. `pipeline` returns a stream that writes to the first stream
+Turn a pipeline into a single stream. `Combine` returns a stream that writes to the first stream
 and reads from the last stream. 
 
 Listening for 'error' will recieve errors from all streams inside the pipe.
