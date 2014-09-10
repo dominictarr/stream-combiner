@@ -24,6 +24,15 @@ Combine(                                  // connect streams together with `pipe
 )
 ```
 
+Can also be called with an array:
+
+```js
+var combinedStream = Combine([
+  stream1,
+  stream2,
+]);
+```
+
 ## License
 
 MIT
