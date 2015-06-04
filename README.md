@@ -1,6 +1,7 @@
 # stream-combiner
 
-<img src=https://secure.travis-ci.org/dominictarr/stream-combiner.png?branch=master>
+[![npm version](https://img.shields.io/npm/v/stream-combiner.svg)](https://npmjs.org/package/stream-combiner) 
+[![Travis CI](https://travis-ci.org/dominictarr/stream-combiner.svg)](https://travis-ci.org/dominictarr/stream-combiner)
 
 ## Combine (stream1,...,streamN)
 
