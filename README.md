@@ -33,6 +33,22 @@ var combinedStream = Combine([
 ]);
 ```
 
+Or to combine gulp plugins:
+
+```js
+function coffeePipe() {
+    return Combine(
+        coffeescript(),
+        coffeelint.reporter('fail').on('error', function(){
+            gutil.beep();
+            gulp.run('lint');
+        });
+};
+
+//usage:
+gulp.src().pipe(coffeePipe());
+```
+
 ## License
 
 MIT
