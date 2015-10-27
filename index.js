@@ -30,7 +30,7 @@ module.exports = function () {
 
   recurse(streams)
 
-  function onerror () {
+  function errHandler () {
     var args = [].slice.call(arguments)
     args.unshift('error')
     thepipe.emit.apply(thepipe, args)
@@ -39,7 +39,7 @@ module.exports = function () {
   //es.duplex already reemits the error from the first and last stream.
   //add a listener for the inner streams in the pipeline.
   for(var i = 1; i < streams.length - 1; i ++)
-    streams[i].on('error', onerror)
+    streams[i].on('error', errHandler)
 
   return thepipe
 }
