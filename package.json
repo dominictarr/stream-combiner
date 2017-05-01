@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git://github.com/dominictarr/stream-combiner.git"
   },
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "duplexer": "~0.1.1",
     "through": "~2.3.4"
